@@ -10,6 +10,6 @@ class Scatter extends StatefulWidget {
 class _ScatterState extends State<Scatter> {
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return Scaffold();
   }
 }
