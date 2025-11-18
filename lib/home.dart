@@ -1,6 +1,7 @@
 import 'package:chart_project/model/developer_data.dart';
 import 'package:chart_project/view/line.dart';
 import 'package:chart_project/view/multi.dart';
+import 'package:chart_project/view/pie.dart';
 import 'package:chart_project/view/scatter.dart';
 import 'package:flutter/material.dart';
 import 'package:syncfusion_flutter_charts/charts.dart';
@@ -65,10 +66,10 @@ class _HomeState extends State<Home>
       body: TabBarView(
         controller: controller,
         children: [
-          Line(data: data),
+          Line(get: data),
           Scatter(data: data),
-          Multi(data: data, data2: data2),
-          Scatter(data: data),
+          MultiLine(data: data, data2: data2),
+          Pie(data: data),
         ],
       ),
       bottomNavigationBar: Container(

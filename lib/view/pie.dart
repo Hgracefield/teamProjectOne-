@@ -1,4 +1,4 @@
-import 'package:chart_barchart_app/model/developer_data.dart';
+import 'package:chart_project/model/developer_data.dart';
 import 'package:flutter/material.dart';
 import 'package:syncfusion_flutter_charts/charts.dart';
 
@@ -11,8 +11,7 @@ class Pie extends StatefulWidget {
   State<Pie> createState() => PieState();
 }
 
-class PieState extends State<Pie>
-    with TickerProviderStateMixin {
+class PieState extends State<Pie> with TickerProviderStateMixin {
   //tabbar
   //property
 
@@ -55,9 +54,7 @@ class PieState extends State<Pie>
               name: 'sites',
               dataSource: widget.data,
               explode: true,
-              selectionBehavior: SelectionBehavior(
-                enable: true,
-              ),
+              selectionBehavior: SelectionBehavior(enable: true),
               xValueMapper: (DeveloperData developers, _) =>
                   developers.year,
               yValueMapper: (DeveloperData developers, _) =>
@@ -74,4 +71,3 @@ class PieState extends State<Pie>
     );
   }
 }
-
